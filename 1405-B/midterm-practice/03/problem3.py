@@ -18,6 +18,4 @@ def jaccard(a, b):
     print(union)
     return len(intersection) / len(union)
 
-
-
 print(jaccard(x, y))
