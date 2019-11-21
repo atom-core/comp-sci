@@ -1,3 +1,1 @@
-# comp-sci
-
 test
