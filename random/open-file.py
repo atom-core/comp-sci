@@ -21,3 +21,5 @@ print("Number of words: " + str(numwords))
 print("Longest word list: " + str(longest_words(filename)))
 print("Shortest word list: " + str(shortest_words(filename)))
 print("Average word length: " + str(word_avg))
+
+infile.close()
