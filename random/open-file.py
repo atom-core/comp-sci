@@ -4,7 +4,7 @@ def longest_words(filename):
         max_len = len(max(words, key=len))
         max_list = []
         for word in words:
-            if len(word) == max_len:
+            if len(word) == max_len and word not in max_list:
                 max_list.append(word)
     return max_list
 
@@ -14,7 +14,7 @@ def shortest_words(filename):
         min_len = len(min(words, key=len))
         min_list = []
         for word in words:
-            if len(word) == min_len:
+            if len(word) == min_len and word not in min_list:
                 min_list.append(word)
     return min_list
 
