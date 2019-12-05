@@ -1,14 +1,22 @@
 def longest_words(filename):
     with open(filename, 'r') as infile:
         words = infile.read().split()
-        sortedwords = sorted(words, key=len) 
-    return sortedwords[0]
+        max_len = len(max(words, key=len))
+        max_list = []
+        for word in words:
+            if len(word) == max_len:
+                max_list.append(word)
+    return max_list
 
 def shortest_words(filename):
     with open(filename, 'r') as infile:
         words = infile.read().split()
-        sortedwords = sorted(words, key=len) 
-    return sortedwords[-1]
+        min_len = len(min(words, key=len))
+        min_list = []
+        for word in words:
+            if len(word) == min_len:
+                min_list.append(word)
+    return min_list
 
 filename = input("Enter filename: ")
 infile = open(filename, 'r')
